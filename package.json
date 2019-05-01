@@ -1,0 +1,23 @@
+{
+  "name": "ExpressLambda",
+  "version": "1.0.0",
+  "description": "Deploy a REST API using Serverless, Express and Node.js",
+  "main": "app.js",
+  "author": "Tri Luong",
+  "license": "MIT",
+  "scripts": {
+    "run-offline": "node_modules/.bin/sls offline start",
+    "install-dynamo": "node_modules/.bin/sls dynamodb install",
+    "start-dynamo": "node_modules/.bin/sls dynamodb start",
+    "local-dynamo": "java -Djava.library.path=./.dynamodb/DynamoDBLocal_lib -jar ./.dynamodb/DynamoDBLocal.jar"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.444.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "serverless": "^1.41.1",
+    "serverless-dynamodb-local": "^0.2.37",
+    "serverless-http": "^2.0.1",
+    "serverless-offline": "^4.9.4"
+  }
+}
